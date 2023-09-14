@@ -1,0 +1,81 @@
+﻿<Page x:Class="Robots_inc.WndCreateRobot"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Robots_inc"
+        mc:Ignorable="d"
+        Title="WndCreateRobot" Height="450" Width="650">
+    <Page.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#F8F8F8" Offset="0.3"/>
+                        <GradientStop Color="#50B6BB" Offset="0.55"/>
+                        <GradientStop Color="#45969B" Offset="0.7"/>
+                        <GradientStop Color="#F96D15" Offset="0.95"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="100"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>
+        </Style>
+        <Style x:Key="tbHeader" TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Foreground" Value="#F96D15"/>
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+        <Style x:Key="baseText" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Create a new Robot" Grid.Row="0" Style="{StaticResource tbHeader}" />
+        <!-- Images - תמונות -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Grid.Row="1">
+            <Button x:Name="btnWheels" Click="btnWheels_Click">
+                <Image x:Name="imgLegs" Source="pack://application:,,,/images/r1.jpg" Stretch="Fill"/>
+            </Button>
+            <Button x:Name="btnLegs" Click="btnLegs_Click">
+                <Image x:Name="imgQuad" Source="pack://application:,,,/images/r2.jpg" Stretch="Fill"/>
+            </Button>
+            <Button x:Name="btnFly" Click="btnFly_Click">
+                <Image x:Name="imgFly" Source="pack://application:,,,/images/r3.jpg" Stretch="Fill"/>
+            </Button>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="2" Margin="20,0,0,0">
+            <TextBlock Text="Data for Model" TextDecorations="UnderLine" Style="{StaticResource baseText}"/>
+            <TextBlock x:Name="tbModel" Text="Model:" Style="{StaticResource baseText}"/>
+            <TextBlock x:Name="tbTotal" Text="Total Robots in company:" Style="{StaticResource baseText}"/>
+            <TextBlock x:Name="tbMission" Text="Total mission used:" Style="{StaticResource baseText}"/>
+            <TextBlock x:Name="tbSuccess" Text="Mission completed:" Style="{StaticResource baseText}"/>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Grid.Row="3">
+            <Button x:Name="btnCreate" Content="Create"
+                    Background="Black" Foreground="White"
+                    Height="50" FontSize="25" FontWeight="Bold" Click="btnCreate_Click">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            
+        </StackPanel>
+    </Grid>
+
+</Page>

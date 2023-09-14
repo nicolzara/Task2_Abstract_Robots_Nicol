@@ -1,0 +1,52 @@
+﻿<Window x:Class="Robots_inc.WndMain"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Robots_inc"
+        mc:Ignorable="d"
+        Icon="/images/Mini-Robot-icon.ico"
+        Title="ManagerWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style x:Key="tbHeader" TargetType="TextBlock">
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="35"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="Foreground" Value="#3d8d86"/>
+        </Style>
+    </Window.Resources>
+    <DockPanel>
+            <Menu DockPanel.Dock="Top" x:Name="mnMain">
+                <Menu.Background>
+                    <SolidColorBrush Color="Black"/>
+                </Menu.Background>
+                <Menu.Resources>
+                    <Style TargetType="MenuItem">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontSize" Value="20"/>
+                    </Style>
+                </Menu.Resources>
+                <MenuItem Header="Robots" x:Name="mnRobots">
+                    <MenuItem Header="Add New RoBoT" />
+                    <MenuItem Header="View All Robots"/>
+                </MenuItem>
+            <MenuItem Header="Workers"  x:Name="mnWorkers">
+                    <MenuItem Header="Add new Worker"/>
+                    <MenuItem Header="View all workers"/>
+                </MenuItem>
+            <MenuItem Header="Missions" x:Name="mnMissions">
+                    <MenuItem Header="Add new mission"/>
+                    <MenuItem Header="View all"/>
+                </MenuItem>
+            <MenuItem Header="Exit"/>
+        </Menu>
+        
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="tbHeader" Grid.Row="0" Grid.ColumnSpan="4"
+                   Text="Worker name + type" Style="{StaticResource tbHeader}"/>
+        <StackPanel x:Name="workPanel" Grid.Row="2"/>
+
+    </StackPanel>
+    </DockPanel>
+</Window>
