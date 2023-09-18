@@ -49,7 +49,7 @@ namespace Robots_inc
             switch (rule)
             {
                 case "Operational Worker":  //hide all and load mission page
-                    workPanel.Children.Add(new UcMission());
+                    workPanel.Children.Add(new UcMissions(worker, activeMissions[0]));
                     mnMain.Visibility = Visibility.Hidden;
                     break;
                 case "Operation Manager":   //hide robot and worker menu

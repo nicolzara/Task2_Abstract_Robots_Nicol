@@ -1,4 +1,4 @@
-﻿<Page x:Class="Robots_inc.WndCreateRobot"
+﻿<Window x:Class="Robots_inc.WndCreateRobot"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Robots_inc"
         mc:Ignorable="d"
         Title="WndCreateRobot" Height="450" Width="650">
-    <Page.Resources>
+    <Window.Resources>
         <Style TargetType="Grid">
             <Setter Property="Background">
                 <Setter.Value>
@@ -36,7 +36,7 @@
             <Setter Property="FontFamily" Value="Consolas"/>
             <Setter Property="Foreground" Value="White"/>
         </Style>
-    </Page.Resources>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
@@ -74,8 +74,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            
+
         </StackPanel>
     </Grid>
-
-</Page>
+</Window>

@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Abstract_Robots.UcMissions"
+﻿<UserControl x:Class="Robots_inc.UcMissions"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
