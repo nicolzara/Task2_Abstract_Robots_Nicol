@@ -63,6 +63,9 @@
     <Compile Include="UcRobot.xaml.cs">
       <DependentUpon>UcRobot.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControlWorker.xaml.cs">
+      <DependentUpon>UserControlWorker.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ValiditionRules.cs" />
     <Compile Include="WndWorkerInfo.xaml.cs">
       <DependentUpon>WndWorkerInfo.xaml</DependentUpon>
@@ -89,6 +92,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UcRobot.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControlWorker.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

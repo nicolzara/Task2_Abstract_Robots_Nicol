@@ -50,20 +50,20 @@ namespace Robots_inc
         {
             List<Worker> workers = new List<Worker>();
 
-            Worker worker = new OperationalWorker("Opp", "123456", new DateTime(), "123456", 32, 150);
+            Worker worker = new OperationalWorker("Opp", "123456", DateTime.Parse("01.06.2011"), "123456", 32, 150);
             workers.Add(worker);
-            worker = new OperationalWorker("Bob", "654321", new DateTime(), "654321", 34, 145);
+            worker = new OperationalWorker("Bob", "654321", DateTime.Parse("21.09.2016"), "654321", 34, 145);
             workers.Add(worker);
-            worker = new OperationalWorker("Alice", "135790", new DateTime(), "135790", 35.5, 155);
-            workers.Add(worker);
-
-            worker = new OperationManager("Marcel", "121212", new DateTime(), "121212", 45, 150, 0);
-            workers.Add(worker);
-            worker = new OperationManager("David", "131313", new DateTime(), "131313", 50, 145, 0);
+            worker = new OperationalWorker("Alice", "135790", DateTime.Parse("31.12.2023"), "135790", 35.5, 155);
             workers.Add(worker);
 
-            worker = new GeneralManager("Carlos", "456789", new DateTime(), "456789", 10550, 50);
+            worker = new OperationManager("Marcel", "121212", DateTime.Parse("12.12.2020"), "121212", 45, 150, 0);
             workers.Add(worker);
+            worker = new OperationManager("David", "131313", DateTime.Parse("04.08.2012"), "131313", 50, 145, 0);
+            workers.Add(worker);
+
+            worker = new GeneralManager("Carlos", "456789", DateTime.Parse("01.02.2013"), "456789", 10550, 50);
+            workers.Add(worker); 
 
             return workers;
 
@@ -118,23 +118,23 @@ namespace Robots_inc
         {
             List<RobotSpy> robots = new List<RobotSpy>();
 
-            RobotSpy robot = new RobotFly(new DateTime(), 100);
+            RobotSpy robot = new RobotFly(DateTime.Parse("01.02.2013"), 100);
             robots.Add(robot);
-            robot = new RobotFly(new DateTime(), 50);
+            robot = new RobotFly(DateTime.Now, 50);
             robots.Add(robot);
-            robot = new RobotFly(new DateTime(), 75);
-            robots.Add(robot);
-
-            robot = new RobotQuad(new DateTime(), 100);
-            robots.Add(robot);
-            robot = new RobotQuad(new DateTime(), 50);
-            robots.Add(robot);
-            robot = new RobotQuad(new DateTime(), 75);
+            robot = new RobotFly(DateTime.Now, 75);
             robots.Add(robot);
 
-            robot = new RobotWheels(new DateTime(), 100);
+            robot = new RobotQuad(DateTime.Now, 100);
             robots.Add(robot);
-            robot = new RobotWheels(new DateTime(), 50);
+            robot = new RobotQuad(DateTime.Now, 50);
+            robots.Add(robot);
+            robot = new RobotQuad(DateTime.Now, 75);
+            robots.Add(robot);
+
+            robot = new RobotWheels(DateTime.Now, 100);
+            robots.Add(robot);
+            robot = new RobotWheels(DateTime.Now, 50);
             robots.Add(robot);
 
             return robots;
@@ -148,15 +148,15 @@ namespace Robots_inc
         {
             List<Mission> missions = new List<Mission>();
 
-            Mission mission = new Mission(new DateTime(2024, 05, 09, 09, 15, 00), "put the box in the garage");
+            Mission mission = new Mission(DateTime.Parse("01.12.2023"), "put the box in the garage");
             missions.Add(mission);
-            mission = new Mission(new DateTime(2024, 05, 06, 02, 15, 00), "find the best computer");
+            mission = new Mission(DateTime.Parse("04.08.2024"), "find the best computer");
             missions.Add(mission);
-            mission = new Mission(new DateTime(2023, 10, 08, 14, 15, 00), "take down the president");
+            mission = new Mission(DateTime.Parse("01.02.2024"), "take down the president");
             missions.Add(mission);
-            mission = new Mission(new DateTime(2024, 03, 09, 08, 15, 00), "write a song about poop");
+            mission = new Mission(DateTime.Parse("12.04.2024"), "write a song about poop");
             missions.Add(mission);
-            mission = new Mission(new DateTime(2024, 03, 04, 12, 15, 00), "take the dog out");
+            mission = new Mission(DateTime.Parse("19.11.2023"), "take the dog out");
             missions.Add(mission);
 
             return missions;

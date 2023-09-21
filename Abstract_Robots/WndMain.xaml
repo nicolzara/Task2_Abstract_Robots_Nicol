@@ -33,7 +33,7 @@
                 </MenuItem>
             <MenuItem Header="Workers"  x:Name="mnWorkers">
                     <MenuItem Header="Add new Worker"/>
-                    <MenuItem Header="View all workers"/>
+                    <MenuItem Header="View all workers" Click="ViewWorkers_Click"/>
                 </MenuItem>
             <MenuItem Header="Missions" x:Name="mnMissions">
                     <MenuItem Header="Add new mission"/>
@@ -45,7 +45,7 @@
         <StackPanel Orientation="Vertical">
             <TextBlock x:Name="tbHeader" Grid.Row="0" Grid.ColumnSpan="4"
                    Text="Worker name + type" Style="{StaticResource tbHeader}"/>
-        <StackPanel x:Name="workPanel" Grid.Row="2"/>
+        <WrapPanel x:Name="workPanel" Grid.Row="2"/>
 
     </StackPanel>
     </DockPanel>

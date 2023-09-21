@@ -11,8 +11,11 @@ namespace Robots_inc
     public abstract class Worker
     {
         private string fullName;
+        public string FullName { get { return fullName; } set { this.fullName = value; } }
         private string idNumber;
+        public string IDNumber { get { return idNumber; } set { this.idNumber = value; } }
         private DateTime birthDate;
+        
         private string password;
 
 
@@ -32,6 +35,7 @@ namespace Robots_inc
 
         public DateTime GetBirthDate() { return this.birthDate; }
         public void SetBirthDate(DateTime bDate) {  this.birthDate = bDate; }
+        public DateTime BirthDate { get { return birthDate; } set { this.birthDate = value; } }
 
         public string GetPassword() { return this.password; }
         public void SetPassword(string pass) { this.password = pass; }
